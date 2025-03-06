@@ -1,0 +1,84 @@
+---
+import beneficio_fondo from '../assets/beneficios/beneficios-fondo.png';
+import restaurante_ico from '../assets/beneficios/restaurant.png';
+import bebida_ico from '../assets/beneficios/poinsettia.png';
+import limpieza_ico from '../assets/beneficios/house-keeping.png';
+---
+
+<section id="beneficios">
+    <img id="beneficios-fondo" src={beneficio_fondo.src} alt="">
+    <div id="beneficios-info">
+        <img src={restaurante_ico.src} alt="">
+        <span>Platos frescos y llenos de sabor, con los mejores mariscos y el auténtico toque peruano en cada bocado</span>
+    </div>
+    <div id="beneficios-info">
+        <img src={bebida_ico.src} alt="">
+        <span>Refresca tu experiencia con chicha morada, pisco sour y jugos naturales, ideales para acompañar cada plato</span>
+    </div>
+    <div id="beneficios-info">
+        <img src={limpieza_ico.src} alt="">
+        <span>Ambiente impecable y seguro, con altos estándares de higiene para disfrutar con tranquilidad y calma</span>
+    </div>
+</section>
+
+<style>
+    #beneficios {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background-color: #111212;
+        padding: 65px 120px 65px 120px;
+        gap: 100px;
+    }
+
+    #beneficios-fondo {
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    #beneficios-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 330px;
+        gap: 35px;
+
+        & img {
+            width: 90px;
+        }
+
+        & span {
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #beneficios {
+            flex-direction: column;
+            align-items: center;
+            padding: 65px 30px 65px 30px;
+            gap: 50px;
+        }
+
+        #beneficios-info {
+            max-width: 230px;
+            gap: 30px;
+
+            & img {
+                width: 60px;
+            }
+
+            & span {
+                font-size: 12px;
+            }
+        }
+    }
+</style>

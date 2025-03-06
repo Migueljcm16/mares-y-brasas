@@ -1,0 +1,108 @@
+---
+import descubre1 from '../assets/descubre/descubre1.png';
+import descubre2 from '../assets/descubre/descubre2.png';
+import descubre3 from '../assets/descubre/descubre3.png';
+import descubre4 from '../assets/descubre/descubre4.png';
+---
+
+<section id="descubre">
+    <div id="descrubre-info">
+        <span>DESCUBRE</span><br>
+        <span>NUEVOS SABORES</span>
+        <p>
+            Cada bocado en nuestro restaurante es una explosión de frescura y tradición. 
+            Desde un ceviche vibrante hasta un delicioso arroz con mariscos, nuestra cocina combina 
+            ingredientes frescos con el auténtico sabor peruano.
+            <br><br>
+            Déjate sorprender por la intensidad de los cítricos, el toque especial de nuestras especias 
+            y la suavidad de los mejores mariscos. Sumérgete en una experiencia única y disfruta lo mejor 
+            del mar en cada plato.
+        </p>
+    </div>
+    <div id="descubre-img">
+        <img src={descubre1.src} alt="plato 1">
+        <img src={descubre2.src} alt="plato 2">
+        <img src={descubre3.src} alt="plato 3">
+        <img src={descubre4.src} alt="plato 4">
+    </div>
+</section>
+
+<style>
+    #descubre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 65px 120px 65px 120px;
+        gap: 70px;
+    }
+
+    #descrubre-info {
+        max-width: 468px;
+
+        & span {
+            font-family: "Oswald", sans-serif;
+            font-weight: 500;
+
+            &:nth-child(1) {
+                color: #CD310C;
+                font-size: 26px;
+            }
+
+            &:nth-child(3) {
+                font-size: 45px;
+                line-height: 55px;
+            }
+        }
+
+        & p {
+            margin: 0;
+            margin-top: 25px;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            text-align: justify;
+            color: #525453;
+        }
+    }
+
+    #descubre-img {
+        display: flex;
+        max-width: 762px;
+        gap: 15px;
+        flex: 1;
+
+        & img {
+            width: 0px;
+            flex: 1;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #descubre {
+            flex-direction: column;
+            padding: 65px 30px 65px 30px;
+            gap: 40px;
+        }
+
+        #descrubre-info {
+            text-align: center;
+
+            & > span:nth-child(1) {
+                font-size: 22px;
+            }
+
+            & > span:nth-child(3) {
+                font-size: 35px;
+                line-height: 45px;
+            }
+
+            & p {
+                margin-top: 30px;
+                text-align: start;
+            }
+        }
+
+        #descubre-img {
+            width: 100%;
+        }
+    }
+</style>

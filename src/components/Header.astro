@@ -1,0 +1,236 @@
+---
+import background from '../assets/background-header.webp';
+import logoMyB from '../assets/logoMyB.svg';
+---
+
+<header>
+    <img id="background" src={background.src} alt="background">
+    <nav>
+        <img src={logoMyB.src} alt="logo">
+        <div>
+            <a href="#" id="scroll-inicio">INICIO</a>
+            <a href="#" id="scroll-menu">MENU</a>
+            <a href="#" id="scroll-nosotros">NOSOTROS</a>
+            <a href="#" id="scroll-ubicanos">UBICANOS</a>
+        </div>
+    </nav>
+    <div id="contenido">
+        <div>
+            <div id="contenido-estado">
+                <hr>
+                <span>ESTAMOS ABIERTOS</span>
+                <hr>
+            </div>
+            <span id="contenido-mensaje">LA VERDADERA ESENCIA<br>DEL MAR Y DE LAS BRASAS</span>
+            <span id="contenido-info">AV. ÓSCAR R. BENAVIDES 721, LIMA | (01) 424 - 9490 | 999654444</span>
+        </div>
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=51999654444&text=Hola,%20Mares%20y%20Brases,%20quiero%20hacer%20un%20pedido%20del%20Bar.%0AMi%20pedido%20es:" target="_blank" id="scroll-whatsapp">RESERVAR AHORA</a>
+            <a href="#" id="scroll-carta">NUESTRA CARTA</a>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.4);
+        position: absolute;
+        z-index: -1;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        padding: 0 120px 0 120px;
+        width: 100%;
+        height: 125px;
+        box-sizing: border-box;
+        transition-duration: 0.3s;
+        z-index: 99;
+
+        & img {
+            width: 170px;
+        }
+
+        & div {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            & a {
+                position: relative;
+                color: #fff;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+            & a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                width: 100%;
+                height: 3px;
+                background-color: white;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            & a:hover::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    .scrolled {
+        background-color: #252525;
+        padding: 0 120px 0 120px;
+        height: 70px;
+
+        & img {
+            width: 125px;
+        }
+    }
+
+    #contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 125px 120px 65px 120px;
+        flex: 1;
+        gap: 50px;
+
+        & > div {
+            display: flex;
+            align-items: center;
+
+            &:nth-child(1) {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &:nth-child(2) {
+                gap: 45px;
+            }
+        }
+    }
+
+    #contenido-estado {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        & hr {
+            margin: 0;
+            border: none;
+            width: 120px;
+            height: 3px;
+            background: #0AED68;
+        }
+
+        & span {
+            color: #0AED68;
+            font-size: 18px;
+            font-weight: 900;
+            font-family: "Roboto", sans-serif;
+            letter-spacing: 1px;
+            text-shadow: #000000 0px 0 5px;
+        }
+    }
+
+    #contenido-mensaje {
+        color: #fff;
+        font-size: 60px;
+        font-family: "Big Shoulders Display", sans-serif;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 60px;
+        text-shadow: #000000 0px 0 5px;
+    }
+
+    #contenido-info {
+        color: #BFBFBF;
+        font-size: 16px;
+        font-weight: 500;
+        text-shadow: #000000 0px 0 5px;
+    }
+
+    #scroll-whatsapp, #scroll-carta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        width: 165px;
+        height: 45px;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:nth-child(1) {
+            background: #CD310C;
+        }
+
+        &:nth-child(2) {
+            background: #018AFF;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #contenido {
+            padding: 125px 30px 65px 30px;
+
+            & > div {
+
+                &:nth-child(2) {
+                    gap: 30px;
+                }
+            }
+        }
+
+        #contenido-estado {
+
+            & hr {
+                width: 40px;
+            }
+
+            & span {
+                font-size: 14px;
+            }
+        }
+
+        #contenido-mensaje {
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        #contenido-info {
+            text-align: center;
+            font-size: 10px;
+        }
+
+        #scroll-whatsapp, #scroll-carta {
+            width: 115px;
+            height: 35px;
+            font-size: 10px;
+        }
+    }
+</style>

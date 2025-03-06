@@ -1,0 +1,164 @@
+---
+
+---
+
+<section id="nosotros">
+    <div id="nosotros-titulo">
+        <span>DESCUBRE MAS</span>
+        <br>
+        <span>SOBRE NOSOTROS</span>
+    </div>
+    <div id="nosotros-info">
+        <iframe src="https://youtube.com/embed/6gVAGTTivMo?si=C42tet852niGLrMC" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Mares y brasas"></iframe>
+        <div>
+            <span id="nosotros-info-titulo">DINAMICAS</span>
+            <p id="nosotros-info-parrafo">
+                Descubre la pasión y el ritmo de nuestra cocina en acción. Desde la preparación de cada 
+                plato hasta la atención cálida de nuestro equipo, te mostramos cómo convertimos cada visita 
+                en una experiencia única llena de sabor y tradición.
+            </p>
+            <br>
+            <span id="nosotros-info-titulo">NUESTRO LOCAL</span>
+            <p id="nosotros-info-parrafo">
+                Sumérgete en un ambiente acogedor y lleno de esencia peruana. Te invitamos a conocer 
+                nuestros espacios diseñados para brindarte comodidad, calidez y la mejor experiencia 
+                gastronómica junto al mar.
+            </p>
+            <br><br>
+            <a href="https://www.tiktok.com/@maresybrasas.restobar" target="_blank" id="nosotros-info-link">MAS VIDEOS</a>
+        </div>
+    </div>
+</section>
+<section id="ubicacion">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15607.863700253576!2d-77.05486421636598!3d-12.045865501888132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf46db57651d%3A0x94dbdb014bc72989!2sMares%20y%20Brasas%20Restobar!5e0!3m2!1ses-419!2spe!4v1741023383957!5m2!1ses-419!2spe" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<style>
+    #nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 65px 120px 65px 120px;
+        gap: 60px;
+    }
+
+    #nosotros-titulo {
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+
+        & > span:nth-child(1) {
+            font-size: 26px;
+            font-weight: 500;
+            color: #CD310C;
+        }
+
+        & > span:nth-child(3) {
+            font-size: 45px;
+            font-weight: 500;
+            line-height: 50px;
+        }
+    }
+
+    #nosotros-info {
+        display: flex;
+        max-width: 1300px;
+        width: 100%;
+        gap: 50px;
+        
+        & iframe {
+            border-width: 0;
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+            flex: 1;
+        }
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 554px;
+        }
+    }
+
+    #nosotros-info-titulo {
+        font-family: "Oswald", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    #nosotros-info-parrafo {
+        margin: 0;
+        margin-top: 5px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        text-align: justify;
+        color: #525453;
+    }
+
+    #nosotros-info-link {
+        display: block;
+        padding: 10px 20px;
+        border: 3px solid #CD310C;
+        background: #CD310C;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+
+        &:hover {
+            background: #96260a;
+            border: 3px solid #96260a;
+        }
+    }
+
+    #ubicacion {
+        display: flex;
+    }
+
+    @media (max-width: 600px) {
+        #nosotros {
+            padding: 65px 30px 65px 30px;
+            gap: 40px;
+        }
+
+        #nosotros-titulo {
+
+            & > span:nth-child(1) {
+                font-size: 22px;
+            }
+
+            & > span:nth-child(3) {
+                font-size: 35px;
+                line-height: 45px;
+            }
+        }
+
+        #nosotros-info {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            
+            & iframe {
+                height: 300px !important;
+                flex: none;
+            }
+        }
+
+        #nosotros-info-parrafo {
+            text-align: start;
+        }
+
+        #nosotros-info-link {
+            font-size: 14px;
+        }
+
+        #ubicacion iframe {
+            height: 350px !important;
+        }
+    }
+</style>
