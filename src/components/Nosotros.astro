@@ -149,16 +149,101 @@
             }
         }
 
+        #nosotros-info-titulo {
+            font-size: 22px;
+        }
+
         #nosotros-info-parrafo {
             text-align: start;
         }
 
         #nosotros-info-link {
-            font-size: 14px;
+            font-size: 12px;
         }
 
         #ubicacion iframe {
             height: 350px !important;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+        #nosotros {
+            padding: 65px 50px 65px 50px;
+            gap: 40px;
+        }
+
+        #nosotros-titulo {
+
+            & > span:nth-child(1) {
+                font-size: 24px;
+            }
+
+            & > span:nth-child(3) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+        }
+
+        #nosotros-info {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            & > div {
+                max-width: none;
+            }
+            
+            & iframe {
+                height: 400px !important;
+                flex: none;
+            }
+        }
+
+        #nosotros-info-titulo {
+            font-size: 24px;
+        }
+
+        #nosotros-info-parrafo {
+            text-align: start;
+        }
+
+        #nosotros-info-link {
+            font-size: 12px;
+        }
+
+        #ubicacion iframe {
+            height: 350px !important;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        #nosotros {
+            padding: 65px 50px 65px 50px;
+            gap: 40px;
+        }
+
+        #nosotros-titulo {
+
+            & > span:nth-child(1) {
+                font-size: 24px;
+            }
+
+            & > span:nth-child(3) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+        }
+
+        #nosotros-info-titulo {
+            font-size: 24px;
+        }
+
+        #nosotros-info-link {
+            font-size: 12px;
+        }
+
+        #ubicacion iframe {
+            height: 450px !important;
         }
     }
 </style>

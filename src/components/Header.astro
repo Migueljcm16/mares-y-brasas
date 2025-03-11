@@ -7,7 +7,8 @@ import logoMyB from '../assets/logoMyB.svg';
     <img id="background" src={background.src} alt="background">
     <nav>
         <img src={logoMyB.src} alt="logo">
-        <div>
+        <button id="responsive-boton">☰</button>
+        <div id="nav-links">
             <a href="#" id="scroll-inicio">INICIO</a>
             <a href="#" id="scroll-menu">MENU</a>
             <a href="#" id="scroll-nosotros">NOSOTROS</a>
@@ -67,6 +68,7 @@ import logoMyB from '../assets/logoMyB.svg';
             display: flex;
             align-items: center;
             gap: 35px;
+            transition: height 0.5s ease-in-out;
 
             & a {
                 position: relative;
@@ -94,10 +96,18 @@ import logoMyB from '../assets/logoMyB.svg';
             }
         }
     }
+    
+    #responsive-boton {
+        display: none;
+        background: none;
+        border: none;
+        width: 70px;
+        color: #fff;
+        font-size: 35px;
+    }
 
     .scrolled {
         background-color: #252525;
-        padding: 0 120px 0 120px;
         height: 70px;
 
         & img {
@@ -195,6 +205,10 @@ import logoMyB from '../assets/logoMyB.svg';
     }
 
     @media (max-width: 600px) {
+        nav {
+            padding: 0 0 0 30px !important;
+        }
+
         #contenido {
             padding: 125px 30px 65px 30px;
 
@@ -231,6 +245,148 @@ import logoMyB from '../assets/logoMyB.svg';
             width: 115px;
             height: 35px;
             font-size: 10px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        #responsive-boton {
+            display: block;
+        }
+
+        nav {
+            padding: 0 0 0 50px;
+            background-color: #252525;
+            height: 70px;
+
+            & img {
+                width: 125px !important;
+            }
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                background-color: #3b3b3b;
+                top: 70px;
+                left: 0;
+                width: 100vw;
+                height: 0px;
+                gap: 30px;
+                overflow: hidden;
+            }
+        }
+
+        .activo {
+            height: 216px !important;
+        }
+    }
+
+    @media (min-width: 701px) and (max-width: 768px) {
+        nav {
+            padding: 0 50px 0 50px;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+        
+        #contenido {
+            padding: 125px 30px 65px 30px;
+
+            & > div {
+
+                &:nth-child(2) {
+                    gap: 30px;
+                }
+            }
+        }
+
+        #contenido-estado {
+
+            & hr {
+                width: 90px;
+            }
+
+            & span {
+                font-size: 16px;
+            }
+        }
+
+        #contenido-mensaje {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        #contenido-info {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #scroll-whatsapp, #scroll-carta {
+            width: 145px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        nav {
+            padding: 0 50px 0 50px;
+            height: 125px;
+
+            & img {
+                width: 170px;
+            }
+
+            & div {
+
+                & a {
+                    position: relative;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        #contenido {
+            padding: 125px 30px 65px 30px;
+
+            & > div {
+
+                &:nth-child(2) {
+                    gap: 30px;
+                }
+            }
+        }
+
+        #contenido-estado {
+
+            & hr {
+                width: 90px;
+            }
+
+            & span {
+                font-size: 16px;
+            }
+        }
+
+        #contenido-mensaje {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        #contenido-info {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #scroll-whatsapp, #scroll-carta {
+            width: 145px;
+            height: 40px;
+            font-size: 12px;
         }
     }
 </style>
